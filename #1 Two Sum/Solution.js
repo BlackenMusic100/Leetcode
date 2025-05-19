@@ -19,7 +19,7 @@ var twoSum = function(nums, target) {
             }
         }
     }
-    return [firstNum, secondNum]
+    return [firstNumIndex, secondNumIndex]
 };
 
 /**
@@ -37,10 +37,10 @@ var twoSum = function(nums, target) {
  */
 var twoSum = function(nums, target) { 
     const through = {}; // nums[index] as key, index as value
-    for (var i in Range(nums.length)) { // O(n)
+    for (var i = 0; i < nums.length; i++) { // O(n)
         var differences = target - nums[i]; // x + y = target, and thus y = target - x
         if (through.hasOwnProperty(differences)) { 
-            return [nums[i], through.differences];
+            return [through[differences], i];
         } else {
             through[nums[i]] = i;    
         }
