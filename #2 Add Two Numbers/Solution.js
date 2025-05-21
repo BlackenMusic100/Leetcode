@@ -30,3 +30,10 @@ var addTwoNumbers = function(l1, l2) {
     }
     return l3.next;
 };
+
+
+
+/**
+ * Follow-Up Idea:
+ * Using stack to make it to solve same as above func.
+ */
